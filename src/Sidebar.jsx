@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill  } from 'react-icons/bs'
-import { MdContacts } from "react-icons/md";
+import { TbSettings2 } from "react-icons/tb";
 import { FaBirthdayCake } from "react-icons/fa";
 import { MdLocalPrintshop } from "react-icons/md";
+import { IoChevronForwardOutline } from "react-icons/io5";
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
   
@@ -18,7 +19,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
       <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
         <div className='sidebar-title'>
         <div className='sidebar-brand'>
-            <MdContacts className='icon_header' /> Contact Management
+            <TbSettings2  className='icon_header' /> Dashboard
           </div>
       
           <span className='icon close_icon' onClick={OpenSidebar}>X</span>
@@ -27,7 +28,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         <ul className='sidebar-list'>
           <li className='sidebar-list-item'>
             <Link to="#" onClick={handleDashboardClick}>
-              <BsGrid1X2Fill className='icon' /> Settings
+              <BsGrid1X2Fill className='icon' /> Settings  <IoChevronForwardOutline />
             </Link>
             {showSubMenu && (
               <ul className="submenu">
